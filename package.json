@@ -1,0 +1,28 @@
+{
+  "name": "yuhbot-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/ws": "^7.2.4",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5"
+  },
+  "scripts": {
+    "start": "node out/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FracturX/YuhBot-TS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FracturX/YuhBot-TS/issues"
+  },
+  "homepage": "https://github.com/FracturX/YuhBot-TS#readme"
+}
