@@ -12,7 +12,7 @@ module.exports = class coloraddCommand extends BaseCommand {
           message.channel.send("Ask a mod to add the role for you.");
           return;
       }
-      let args = message.content.substring(10);
+      let args = cmdArgs.join(" ")
       const channel = message.channel;
       let roleName = args.split(", ");
       console.log(roleName);

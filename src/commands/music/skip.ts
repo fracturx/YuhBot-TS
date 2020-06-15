@@ -15,19 +15,23 @@ module.exports = class SkipCommand extends BaseCommand {
 
         if (message.guild) {
           const guildId = message.guild.id;
-          const player : Player = client.music.players.get(guildId)!
+          const player = client.music.players.get(guildId)
 
-          const channel = message.member?.voice.channel;
-          if (player && channel) {
-              if (player.voiceChannel.id === channel.id) {
-                  player?.pause(false)
-                      player.stop();
-                      message.channel.send(
-                          `Skipping... ${player.queue[0].title}`
-                      );
-                  
-              }
+          if (player) {
+            const channel = message.member?.voice.channel;
+            if (player && channel) {
+                if (player.voiceChannel.id === channel.id) {
+                    player?.pause(false)
+                        player.stop();
+                        message.channel.send(
+                            `Skipping... ${player.queue[0].title}`
+                        );
+                    
+                }
+            }
           }
+
+ 
 
         }
         //const player = client.music.players.get(guildId);

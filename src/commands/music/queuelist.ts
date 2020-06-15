@@ -7,7 +7,7 @@ import { Queue } from "erela.js";
 
 module.exports = class ViewQueueCommand extends BaseCommand {
   constructor () {
-    super('queuelist', 'music');
+    super('queue', 'music');
   }
 
   async run (client : client, message : Message, args : Array<string>) {
