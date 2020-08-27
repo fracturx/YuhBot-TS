@@ -10,14 +10,16 @@ module.exports =
 
     async run(client: Client, message: Message, args: Array<string>) {
       let vol = args[0] || 1000
-      if (vol > 1000) {
-        vol = 1000;
-      }
       const player = client.music.players.get(message.guild!.id)
-
       if (player) {
         const channel = message.member?.voice.channel;
             if (player && channel) {
+              if (vol > 1000) {
+                player.setVolume(1000);
+                message.channel.send(
+                `Current Volume is now: ${player.volume}.\nWarning: Setting a value higher than 1000 is not permitted.`);
+                return;
+              }
               player.setVolume(+vol)
               message.channel.send(`Current Volume is now: ${player.volume}`)
             }

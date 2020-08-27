@@ -3,7 +3,7 @@ console.log('started');
 import Client from './utils/classes/client'
 import { ErelaClient } from 'erela.js';
 
-const token = process.env.bwap;
+const token = process.env.BOT_TOKEN;
 const client = new Client();
 let poop = new Map()
 

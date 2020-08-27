@@ -47,7 +47,7 @@ module.exports = class ViewQueueCommand extends BaseCommand {
 }
 
 function generateQueueEmbed(queue : Queue, client : client) {
-  const embeds = [];
+  const embeds: MessageEmbed[] = [];
   let k = 10;
   for(let i = 0; i < queue.length; i += 10) {
     const current = queue.slice(i, k);

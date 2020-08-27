@@ -7,7 +7,7 @@ module.exports = class NodeConnectEvent extends BaseEvent {
         super('nodeConnect')
     }
 
-    async run (client : ErelaClient, node : Node) {
+    run = async (client : ErelaClient, node : Node) => {
         console.log('Connection Established with the Database.')
     }
 }
